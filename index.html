@@ -7,11 +7,11 @@
     <meta name="description" content="We help businesses implement AI tools and workflows that save time, reduce costs, and grow revenue. Starting with a free AI audit.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #FAFAF8;
-            --bg-alt: #F3F1EC;
+            --bg: #FAF8F3;
+            --bg-alt: #F2EEE5;
             --text: #1A1A1A;
             --text-secondary: #5C5C5A;
             --accent: #2B6B3D;
@@ -20,31 +20,34 @@
             --warm: #9A7B5B;
             --border: #DDD9D0;
             --white: #FFFFFF;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
             --shadow-md: 0 4px 24px rgba(0,0,0,0.06);
+            --max-w: 1080px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { font-size: 16px; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            font-family: 'DM Sans', -apple-system, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
         }
 
+        /* ── UTILITY ── */
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            width: 100%;
+        }
+
         /* ── NAV ── */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.25rem 5vw;
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 100;
-            background: rgba(250, 250, 248, 0.92);
+            background: rgba(250, 248, 243, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid transparent;
@@ -52,12 +55,21 @@
         }
         nav.scrolled { border-bottom-color: var(--border); }
 
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
         .logo {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'DM Serif Display', serif;
             font-size: 1.5rem;
             color: var(--text);
             text-decoration: none;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
         }
 
         .nav-cta {
@@ -84,8 +96,9 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 8rem 5vw 6rem;
-            max-width: 880px;
+            padding: 8rem 2rem 6rem;
+            max-width: var(--max-w);
+            margin: 0 auto;
         }
 
         .hero-badge {
@@ -112,13 +125,14 @@
         }
 
         .hero h1 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'DM Serif Display', serif;
             font-weight: 400;
-            font-size: clamp(2.8rem, 5.5vw, 4.2rem);
-            line-height: 1.12;
-            letter-spacing: -0.025em;
+            font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
             color: var(--text);
             margin-bottom: 1.75rem;
+            max-width: 780px;
         }
         .hero h1 em {
             font-style: italic;
@@ -126,7 +140,8 @@
         }
 
         .hero-sub {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
+            font-weight: 400;
             line-height: 1.8;
             color: var(--text-secondary);
             max-width: 580px;
@@ -144,6 +159,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            font-family: 'DM Sans', sans-serif;
             font-size: 0.85rem;
             font-weight: 600;
             letter-spacing: 0.04em;
@@ -205,18 +221,24 @@
         }
 
         /* ── SECTIONS ── */
-        .section { padding: 6rem 5vw; }
+        .section {
+            padding: 6rem 2rem;
+        }
+
+        .section-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
 
         .section-grid {
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
             gap: 5rem;
-            max-width: 1100px;
         }
 
         .section-label {
             font-size: 0.72rem;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             color: var(--warm);
@@ -224,11 +246,11 @@
         }
 
         .section-heading {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'DM Serif Display', serif;
             font-weight: 400;
             font-size: clamp(1.9rem, 3vw, 2.5rem);
             line-height: 1.2;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.015em;
         }
 
         .section-text {
@@ -238,23 +260,29 @@
         }
         .section-text p + p { margin-top: 1.3rem; }
 
-        .divider { width: 100%; height: 1px; background: var(--border); }
+        .divider {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            height: 1px;
+            background: var(--border);
+        }
 
         /* ── STATS ── */
         .stats-section {
             background: var(--text);
-            padding: 4rem 5vw;
+            padding: 4.5rem 2rem;
         }
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            max-width: 1100px;
+            max-width: var(--max-w);
+            margin: 0 auto;
         }
         .stat-card { text-align: center; padding: 1.5rem; }
         .stat-number {
-            font-family: 'Instrument Serif', serif;
-            font-size: 3rem;
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.2rem;
             color: var(--white);
             line-height: 1;
             margin-bottom: 0.5rem;
@@ -271,7 +299,6 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            max-width: 1100px;
             margin-top: 4rem;
         }
         .process-card {
@@ -286,7 +313,7 @@
             box-shadow: var(--shadow-md);
         }
         .process-number {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'DM Serif Display', serif;
             font-size: 2rem;
             color: var(--accent);
             line-height: 1;
@@ -305,7 +332,7 @@
         .process-tag {
             display: inline-block;
             font-size: 0.7rem;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 0.08em;
             text-transform: uppercase;
             color: var(--accent);
@@ -390,10 +417,14 @@
 
         /* ── CTA ── */
         .cta-section {
-            padding: 7rem 5vw;
+            padding: 7rem 2rem;
             text-align: center;
             background: var(--text);
             color: var(--white);
+        }
+        .cta-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
         }
         .cta-section .section-heading {
             color: var(--white);
@@ -409,6 +440,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            font-family: 'DM Sans', sans-serif;
             font-size: 0.85rem;
             font-weight: 600;
             letter-spacing: 0.04em;
@@ -432,14 +464,18 @@
 
         /* ── FOOTER ── */
         footer {
-            padding: 2.5rem 5vw;
             border-top: 1px solid var(--border);
+        }
+        .footer-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .footer-brand {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'DM Serif Display', serif;
             font-size: 1.1rem;
         }
         .footer-contact {
@@ -465,20 +501,20 @@
 
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
-            nav { padding: 1rem 6vw; }
-            .hero { padding: 7rem 6vw 4rem; min-height: auto; }
-            .section { padding: 4rem 6vw; }
+            .nav-inner { padding: 1rem 1.5rem; }
+            .hero { padding: 7rem 1.5rem 4rem; min-height: auto; }
+            .section { padding: 4rem 1.5rem; }
             .section-grid { grid-template-columns: 1fr; gap: 2rem; }
             .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .stats-section { padding: 3rem 6vw; }
+            .stats-section { padding: 3rem 1.5rem; }
             .process-grid { grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2.5rem; }
             .who-grid { grid-template-columns: 1fr; }
-            .cta-section { padding: 5rem 6vw; }
-            footer {
+            .cta-section { padding: 5rem 1.5rem; }
+            .footer-inner {
                 flex-direction: column;
                 gap: 1rem;
                 text-align: center;
-                padding: 2rem 6vw;
+                padding: 2rem 1.5rem;
             }
             .hero-cta-row {
                 flex-direction: column;
@@ -491,8 +527,10 @@
 
     <!-- NAV -->
     <nav id="navbar">
-        <a href="#" class="logo">Compound</a>
-        <a href="#contact" class="nav-cta">Free AI Audit</a>
+        <div class="nav-inner">
+            <a href="#" class="logo">Compound</a>
+            <a href="#contact" class="nav-cta">Free AI Audit</a>
+        </div>
     </nav>
 
     <!-- HERO -->
@@ -527,21 +565,23 @@
 
     <!-- PROBLEM -->
     <section class="section fade-in">
-        <div class="section-grid">
-            <div>
-                <div class="section-label">The Gap</div>
-                <h2 class="section-heading">Your competitors aren't working harder. They're working&nbsp;differently.</h2>
-            </div>
-            <div class="section-text">
-                <p>
-                    Right now, businesses in your market are using AI to respond to leads in seconds instead of hours, automate the admin work that buries their teams, and make faster decisions with better data. They're not bigger than you. They're not smarter. They just moved first.
-                </p>
-                <p>
-                    The big consulting firms want $250K and six months of your time. The DIY tools expect you to become a technologist overnight. Neither works when you're running a real business with real customers who need you today.
-                </p>
-                <p>
-                    We sit in the gap. We're hands-on builders who find the bottlenecks costing you time and money, then implement the AI workflows that eliminate them — with results you can measure in your P&L, not a PowerPoint.
-                </p>
+        <div class="section-inner">
+            <div class="section-grid">
+                <div>
+                    <div class="section-label">The Gap</div>
+                    <h2 class="section-heading">Your competitors aren't working harder. They're working&nbsp;differently.</h2>
+                </div>
+                <div class="section-text">
+                    <p>
+                        Right now, businesses in your market are using AI to respond to leads in seconds instead of hours, automate the admin work that buries their teams, and make faster decisions with better data. They're not bigger than you. They're not smarter. They just moved first.
+                    </p>
+                    <p>
+                        The big consulting firms want $250K and six months of your time. The DIY tools expect you to become a technologist overnight. Neither works when you're running a real business with real customers who need you today.
+                    </p>
+                    <p>
+                        We sit in the gap. We're hands-on builders who find the bottlenecks costing you time and money, then implement the AI workflows that eliminate them — with results you can measure in your P&L, not a PowerPoint.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -566,59 +606,63 @@
 
     <!-- PROCESS -->
     <section class="section process-section fade-in">
-        <div class="section-label">How It Works</div>
-        <h2 class="section-heading">From audit to ROI in weeks, not&nbsp;months.</h2>
-        <div class="process-grid">
-            <div class="process-card">
-                <div class="process-number">01</div>
-                <div class="process-title">Free AI Audit</div>
-                <p class="process-desc">
-                    We map your operations and identify the 3–5 highest-impact opportunities where AI can save time, cut costs, or drive revenue. You get a written report with estimated ROI for each — whether you hire us or not.
-                </p>
-                <span class="process-tag">No cost · No obligation</span>
-            </div>
-            <div class="process-card">
-                <div class="process-number">02</div>
-                <div class="process-title">Implementation</div>
-                <p class="process-desc">
-                    We build and deploy the workflows that move the needle. Automated follow-ups, AI scheduling, smart reporting, internal knowledge bases — whatever produces the fastest measurable return for your business.
-                </p>
-                <span class="process-tag">Project-based pricing</span>
-            </div>
-            <div class="process-card">
-                <div class="process-number">03</div>
-                <div class="process-title">Compounding Returns</div>
-                <p class="process-desc">
-                    AI systems get smarter and more valuable over time. We optimize what's working, expand into new workflows, and keep you ahead — so the gap between you and your competitors keeps growing.
-                </p>
-                <span class="process-tag">Ongoing partnership</span>
+        <div class="section-inner">
+            <div class="section-label">How It Works</div>
+            <h2 class="section-heading">From audit to ROI in weeks, not&nbsp;months.</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <div class="process-title">Free AI Audit</div>
+                    <p class="process-desc">
+                        We map your operations and identify the 3–5 highest-impact opportunities where AI can save time, cut costs, or drive revenue. You get a written report with estimated ROI for each — whether you hire us or not.
+                    </p>
+                    <span class="process-tag">No cost · No obligation</span>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <div class="process-title">Implementation</div>
+                    <p class="process-desc">
+                        We build and deploy the workflows that move the needle. Automated follow-ups, AI scheduling, smart reporting, internal knowledge bases — whatever produces the fastest measurable return for your business.
+                    </p>
+                    <span class="process-tag">Project-based pricing</span>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <div class="process-title">Compounding Returns</div>
+                    <p class="process-desc">
+                        AI systems get smarter and more valuable over time. We optimize what's working, expand into new workflows, and keep you ahead — so the gap between you and your competitors keeps growing.
+                    </p>
+                    <span class="process-tag">Ongoing partnership</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- WHO WE WORK WITH -->
     <section class="section fade-in">
-        <div class="who-intro">
-            <div class="section-label">Who This Is For</div>
-            <h2 class="section-heading">Built for owners who refuse to be outworked — or&nbsp;outsmarted.</h2>
-            <p class="section-text">You don't need to be the biggest company. You need to be the smartest operator.</p>
-        </div>
-        <div class="who-grid">
-            <div class="who-card">
-                <strong>Growing businesses</strong>
-                <span>$1M–$5M in revenue, 5–50 employees, ready to scale without scaling headcount</span>
+        <div class="section-inner">
+            <div class="who-intro">
+                <div class="section-label">Who This Is For</div>
+                <h2 class="section-heading">Built for owners who refuse to be outworked — or&nbsp;outsmarted.</h2>
+                <p class="section-text">You don't need to be the biggest company. You need to be the smartest operator.</p>
             </div>
-            <div class="who-card">
-                <strong>Service-oriented companies</strong>
-                <span>Home services, agencies, property management, professional services, trades</span>
-            </div>
-            <div class="who-card">
-                <strong>Bay Area based</strong>
-                <span>We work face-to-face because the best partnerships are built in person</span>
-            </div>
-            <div class="who-card">
-                <strong>Ambitious but stretched thin</strong>
-                <span>You know AI matters but don't have time to figure it out on top of everything else</span>
+            <div class="who-grid">
+                <div class="who-card">
+                    <strong>Growing businesses</strong>
+                    <span>$1M–$5M in revenue, 5–50 employees, ready to scale without scaling headcount</span>
+                </div>
+                <div class="who-card">
+                    <strong>Service-oriented companies</strong>
+                    <span>Home services, agencies, property management, professional services, trades</span>
+                </div>
+                <div class="who-card">
+                    <strong>Bay Area based</strong>
+                    <span>We work face-to-face because the best partnerships are built in person</span>
+                </div>
+                <div class="who-card">
+                    <strong>Ambitious but stretched thin</strong>
+                    <span>You know AI matters but don't have time to figure it out on top of everything else</span>
+                </div>
             </div>
         </div>
     </section>
@@ -627,61 +671,63 @@
 
     <!-- FAQ -->
     <section class="section faq-section fade-in">
-        <div class="section-label">Common Questions</div>
-        <h2 class="section-heading">Straight answers.</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question">
-                    What does the free AI audit actually include?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">A 60-minute deep dive into your operations, followed by a written report identifying 3–5 specific AI opportunities with estimated time savings, cost reductions, and revenue impact for each. You keep the report regardless of whether we work together. No strings.</div>
+        <div class="section-inner">
+            <div class="section-label">Common Questions</div>
+            <h2 class="section-heading">Straight answers.</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What does the free AI audit actually include?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">A 60-minute deep dive into your operations, followed by a written report identifying 3–5 specific AI opportunities with estimated time savings, cost reductions, and revenue impact for each. You keep the report regardless of whether we work together. No strings.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    I don't really understand AI. Is this still for me?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">That's exactly who this is for. You don't need to understand AI — you need to understand your business, and you already do. We handle the technology. You tell us where it hurts, and we build the solution. Our best clients aren't technical people. They're smart operators who know a good investment when they see one.</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        I don't really understand AI. Is this still for me?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">That's exactly who this is for. You don't need to understand AI — you need to understand your business, and you already do. We handle the technology. You tell us where it hurts, and we build the solution. Our best clients aren't technical people. They're smart operators who know a good investment when they see one.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    How much does implementation cost?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">Implementation projects typically range from $2,000–$10,000 depending on scope. But here's what matters: every project is tied to a measurable outcome. If we can't show you a clear return on your investment, we'll tell you before you spend a dollar.</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How much does implementation cost?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Implementation projects typically range from $2,000–$10,000 depending on scope. But here's what matters: every project is tied to a measurable outcome. If we can't show you a clear return on your investment, we'll tell you before you spend a dollar.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    How long before I see results?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">Most implementations are live within 2–4 weeks. You'll typically see measurable impact — hours saved, faster response times, reduced manual work — within the first month. This isn't a six-month consulting engagement. We move fast because your time is too valuable for anything else.</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long before I see results?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Most implementations are live within 2–4 weeks. You'll typically see measurable impact — hours saved, faster response times, reduced manual work — within the first month. This isn't a six-month consulting engagement. We move fast because your time is too valuable for anything else.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    My business is too small for AI, right?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">It's the opposite. Smaller businesses see the biggest relative impact because every hour and every dollar matters more. A 10-hour-per-week time savings at a Fortune 500 is a rounding error. At a 15-person company, that's the difference between growing and treading water. AI is the first technology that lets smaller teams punch above their weight.</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        My business is too small for AI, right?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">It's the opposite. Smaller businesses see the biggest relative impact because every hour and every dollar matters more. A 10-hour-per-week time savings at a Fortune 500 is a rounding error. At a 15-person company, that's the difference between growing and treading water. AI is the first technology that lets smaller teams punch above their weight.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    What makes Compound different from other consultants?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">We build things. Most consultants hand you a strategy deck and wish you luck. We implement the actual workflows, test them, measure the results, and optimize over time. We don't get paid to talk about AI — we get paid to make it work inside your business.</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What makes Compound different from other consultants?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">We build things. Most consultants hand you a strategy deck and wish you luck. We implement the actual workflows, test them, measure the results, and optimize over time. We don't get paid to talk about AI — we get paid to make it work inside your business.</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -689,35 +735,37 @@
 
     <!-- CTA -->
     <section class="cta-section fade-in" id="contact">
-        <div class="section-label" style="color: rgba(255,255,255,0.4);">Get Started</div>
-        <h2 class="section-heading">Your competitors won't wait.<br>Neither should you.</h2>
-        <p class="section-text">
-            Book a free AI audit. In 60 minutes, we'll show you exactly where AI can make a measurable difference in your business — and what it's costing you to wait.
-        </p>
-        <a href="mailto:chris@compoundconsulting.co?subject=Free%20AI%20Audit%20%E2%80%93%20Let%27s%20Talk" class="btn-light">
-            Book Your Free Audit
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
-        </a>
-        <div class="cta-note">Free · 60 minutes · No obligation</div>
+        <div class="cta-inner">
+            <div class="section-label" style="color: rgba(255,255,255,0.4);">Get Started</div>
+            <h2 class="section-heading">Your competitors won't wait.<br>Neither should you.</h2>
+            <p class="section-text">
+                Book a free AI audit. In 60 minutes, we'll show you exactly where AI can make a measurable difference in your business — and what it's costing you to wait.
+            </p>
+            <a href="mailto:chris@compoundconsulting.co?subject=Free%20AI%20Audit%20%E2%80%93%20Let%27s%20Talk" class="btn-light">
+                Book Your Free Audit
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+            </a>
+            <div class="cta-note">Free · 60 minutes · No obligation</div>
+        </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-brand">Compound</div>
-        <div class="footer-contact">
-            <a href="mailto:chris@compoundconsulting.co">chris@compoundconsulting.co</a>&ensp;·&ensp;San Francisco, CA
+        <div class="footer-inner">
+            <div class="footer-brand">Compound</div>
+            <div class="footer-contact">
+                <a href="mailto:chris@compoundconsulting.co">chris@compoundconsulting.co</a>&ensp;·&ensp;San Francisco, CA
+            </div>
         </div>
     </footer>
 
     <!-- SCRIPTS -->
     <script>
-        // Nav scroll
         const nav = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 40);
         });
 
-        // Fade-in observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -725,7 +773,6 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
