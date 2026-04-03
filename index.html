@@ -91,14 +91,21 @@
         }
 
         /* ── HERO ── */
-        .hero {
+        .hero-wrapper {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            padding: 8rem 2rem 6rem;
+            padding: 6.5rem 2rem 3rem;
             max-width: var(--max-w);
             margin: 0 auto;
+            width: 100%;
         }
 
         .hero-badge {
@@ -187,7 +194,6 @@
         .social-proof {
             padding: 2.5rem 0;
             border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
             overflow: hidden;
         }
         .marquee-track {
@@ -502,7 +508,8 @@
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             .nav-inner { padding: 1rem 1.5rem; }
-            .hero { padding: 7rem 1.5rem 4rem; min-height: auto; }
+            .hero { padding: 6rem 1.5rem 2rem; min-height: auto; }
+            .hero-wrapper { min-height: auto; }
             .section { padding: 4rem 1.5rem; }
             .section-grid { grid-template-columns: 1fr; gap: 2rem; }
             .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -534,32 +541,34 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero">
-        <div class="hero-badge">AI Implementation Partner</div>
-        <h1>The best operators in your market are already using&nbsp;AI. <em>Are&nbsp;you?</em></h1>
-        <p class="hero-sub">
-            We help growing businesses implement AI workflows that cut costs, reclaim lost hours, and outperform the competition — starting with a free audit that shows you exactly where the money is.
-        </p>
-        <div class="hero-cta-row">
-            <a href="#contact" class="btn-primary">
-                Book Your Free Audit
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
-            </a>
-            <span class="hero-note">Free · 60 minutes · No obligation</span>
-        </div>
-    </section>
+    <div class="hero-wrapper">
+        <section class="hero">
+            <div class="hero-badge">AI Implementation Partner</div>
+            <h1>The best operators in your market are already using&nbsp;AI. <em>Are&nbsp;you?</em></h1>
+            <p class="hero-sub">
+                We help growing businesses implement AI workflows that cut costs, reclaim lost hours, and outperform the competition — starting with a free audit that shows you exactly where the money is.
+            </p>
+            <div class="hero-cta-row">
+                <a href="#contact" class="btn-primary">
+                    Book Your Free Audit
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                </a>
+                <span class="hero-note">Free · 60 minutes · No obligation</span>
+            </div>
+        </section>
 
-    <!-- SOCIAL PROOF MARQUEE -->
-    <div class="social-proof">
-        <div class="marquee-track">
-            <span class="marquee-item">82% of AI projects fail without expert implementation</span>
-            <span class="marquee-item">Businesses using AI effectively grow 2x faster than peers</span>
-            <span class="marquee-item">The average SMB wastes 30+ hours/week on automatable tasks</span>
-            <span class="marquee-item">Only 1% of companies have reached full AI maturity</span>
-            <span class="marquee-item">82% of AI projects fail without expert implementation</span>
-            <span class="marquee-item">Businesses using AI effectively grow 2x faster than peers</span>
-            <span class="marquee-item">The average SMB wastes 30+ hours/week on automatable tasks</span>
-            <span class="marquee-item">Only 1% of companies have reached full AI maturity</span>
+        <!-- SOCIAL PROOF MARQUEE -->
+        <div class="social-proof">
+            <div class="marquee-track">
+                <span class="marquee-item">82% of AI projects fail without expert implementation</span>
+                <span class="marquee-item">Businesses using AI effectively grow 2x faster than peers</span>
+                <span class="marquee-item">The average SMB wastes 30+ hours/week on automatable tasks</span>
+                <span class="marquee-item">Only 1% of companies have reached full AI maturity</span>
+                <span class="marquee-item">82% of AI projects fail without expert implementation</span>
+                <span class="marquee-item">Businesses using AI effectively grow 2x faster than peers</span>
+                <span class="marquee-item">The average SMB wastes 30+ hours/week on automatable tasks</span>
+                <span class="marquee-item">Only 1% of companies have reached full AI maturity</span>
+            </div>
         </div>
     </div>
 
